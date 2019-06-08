@@ -1,0 +1,21 @@
+https://github.com/synergy2411/monocept-vue-demo
+
+
+> node -v			// should be greater than 8
+> npm -v			// should be greater than 5
+> npm install -g vue-cli	// installs vue cli tool globally
+> vue --version			// vue cli version
+
+> npm i npm -g
+
+> vue init simple 01-basic-app	// basic template
+
+https://surveymonkey.com/r/JMBGVS6
+https://surveymonkey.com/r/JXWZ5RF
+
+
+> vue init webpack-simple 02-directive-demo
+> cd 02-directive-demo
+> npm install
+
+> npm run dev
