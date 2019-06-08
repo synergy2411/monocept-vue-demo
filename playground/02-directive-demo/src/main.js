@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Parent from './components/Parent.vue';
+import Vue from 'vue';
+import App from './App.vue';
 
-Vue.component('app-parent', Parent);
+export const eventBus = new Vue();
+
+// Vue.component('app-parent', Parent);
 
 Vue.directive("highlight", {
   bind(el, binding, vnode) {
