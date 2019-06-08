@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2> {{ counter }} </h2>
+    <button v-on:click="increase(2)">Increase</button>
+    Double Value : {{ doubleMethod() }}
+    Computed Props : {{ tripleComputedProp }}
+    <hr>
+    <h2>Second Counter : {{ secondCounter }}</h2>
+    <button v-on:click="increaseSecond(2)">Increase</button>
+
+    <hr>
+
+    <p v-on:mousemove.once = "onMouseEnter($event)">
+      Some cool text
+      
+      <span> DEAD CONTENTS</span>  
+    </p>
+    <p>X : {{ x }} || Y : {{ y }}</p>
+
+
+  </div>
+
+
+  <script>
+    let vm = new Vue({
+      el : '#app',
+      data : {
+        counter : 0,
+        secondCounter : 0,
+        x : 0,
+        y : 0
+      } ,
+      methods : {
+        onMouseEnter(event){
+          // event.preventDefault();
+          console.log(event.clientX);
+          this.x = event.clientX;
+          this.y = event.clientY;
+        },
+        increase : function (step){
+          console.log("INCREASE");
+          this.counter += step ;
+        },
+        doubleMethod(){
+          console.log("DOUBLE METHOD");
+          return this.counter * 2;
+        },
+        increaseSecond(step){
+          console.log("SECOND INCREASE");
+          this.secondCounter += step;
+        }
+      },
+      computed: {
+        tripleComputedProp(){
+          console.log("TRIPLE METHOD");
+          return this.counter * 3;
+        }
+      },
+    })
+
+
+  </script>
+</body>
+
+</html>
