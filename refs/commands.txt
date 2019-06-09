@@ -1,4 +1,5 @@
 https://github.com/synergy2411/monocept-vue-demo
+synergy2411@outlook.com
 
 
 > node -v			// should be greater than 8
@@ -19,3 +20,8 @@ https://surveymonkey.com/r/JXWZ5RF
 > npm install
 
 > npm run dev
+
+> npm install vue-resource --save
+> npm install vue-router --save
+
+

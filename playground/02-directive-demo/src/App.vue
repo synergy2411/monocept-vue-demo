@@ -2,11 +2,23 @@
   <div>
     <h2 v-highlight:background.delay="'green'">Directive Demo</h2>
     <p v-local-directive>Hello VueJS!</p>
-    
+
+    <hr>
+    <app-header></app-header>
+    <br>
+    <router-view></router-view>
+
+    <hr>
+    <app-vue-resource-demo></app-vue-resource-demo>
+
+    <hr>
+
+    <app-filter-demo></app-filter-demo>
+    <app-list></app-list>
     <hr>
     <app-slot-demo>
       <header slot="header">Header Info</header>
-      <main >{{ name }}</main>
+      <main>{{ name }}</main>
       <footer slot="footer">Footer Info</footer>
     </app-slot-demo>
 
@@ -29,7 +41,11 @@ import UserRegistrationForm from "./components/UserRegistrationForm";
 import Parent from "./components/Parent";
 import LifeCycleMethods from "./components/LifeCycleMethods";
 import DynamicComponent from "./components/dynamic/DynamicComponent";
-import SlotDemo from './components/slot/SlotDemo';
+import SlotDemo from "./components/slot/SlotDemo";
+import FilterDemo from "./components/filters/FilterDemo";
+import List from "./components/filters/List";
+import VueResourceDemo from "./components/vue-resource-demo/VueResourceDemo";
+import Header from './components/router-demo/Header';
 
 export default {
   data() {
@@ -41,8 +57,12 @@ export default {
     "app-user-register-form": UserRegistrationForm,
     "app-parent": Parent,
     "app-life-cycle-methods": LifeCycleMethods,
-    "app-dynamic-component" : DynamicComponent,
-    "app-slot-demo" : SlotDemo
+    "app-dynamic-component": DynamicComponent,
+    "app-slot-demo": SlotDemo,
+    "app-filter-demo": FilterDemo,
+    "app-list": List,
+    "app-vue-resource-demo": VueResourceDemo,
+    'app-header' : Header
   },
   directives: {
     "local-directive": {
@@ -55,7 +75,7 @@ export default {
 </script>
 
 <style scoped>
-   main {
-        border : 2px solid grey;
-    }
+main {
+  border: 2px solid grey;
+}
 </style>

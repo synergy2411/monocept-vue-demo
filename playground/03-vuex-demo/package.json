@@ -1,5 +1,5 @@
 {
-  "name": "02-directive-demo",
+  "name": "03-vuex-demo",
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "synergy2411 <synergy2411@outlook.com>",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "vue": "^2.5.11",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.0.6"
+    "vuex": "^3.1.1"
   },
   "browserslist": [
     "> 1%",
